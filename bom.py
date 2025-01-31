@@ -29,7 +29,8 @@ try:
     server.login(user, passwd)
 
     for i in range(1, emails + 1):
-        msg = f"From: {user}\\nSubject: {subject}\\n{body}"
+       # msg = f"From: {user}\\nSubject: {subject}\\n{body}"
+        msg = 'From: ' + user + '\nMessage: ' + '\n' + body
         server.sendmail(user, to, msg)
         print(f"Sending Email {i}/{emails}...")
 
